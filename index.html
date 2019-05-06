@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Library Catalogue Search</title>
+    <style type="text/css">
+      body {
+        width: 960px; /* Fixed width */
+        margin: auto; /* Centered in browser window */
+        background-color: darkslategrey;
+      }
+      h1, p, label, table { /* All text uses same font and colour */
+        font-family: Helvetica, Arial, sans-serif;
+        color: white;
+      }
+      h1 { /* Title header */
+        margin: 30px 20px; /* top & bottom = 30px, right & left = 20px */
+        border: 1px solid white;
+        padding: 10px;
+        background-color: teal;
+        font-size: 40px;
+        text-align: center;
+      }
+      .textbox { /* Container for body text */
+        width: 750px; /* Fixed width */
+        margin: 32px auto 26px auto;
+      }
+      p { /* Body text */
+        font-size: 26px;
+      }
+      form {
+        text-align: center; /* When margin:auto doesn't work, try text-align:center */
+        border: 1px solid white;
+        border-radius: 8px;
+        padding: 8px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      input { /* Styling for text input box and submit button */
+        font-size: 120%;
+        border: 1px solid white; /* Replaces default beveled border */
+        border-radius: 5px;
+        padding: 5px 12px 5px 12px;
+      }
+      input#submit { /* Additional styling for submit button */
+        color: white;
+        border: 2px solid white;
+        background-color: darkslategrey;
+      }
+      input#submit:hover { /* Rule for hovering over submit button */
+        background-color: teal;
+      }
+      label, #submit { margin-left: 25px; } /* Spacing to the left of labels & submit button */
+      label {
+        font-size: 22px;
+        margin-right: 5px; /* Spaces between labels & their form elements */
+      }
+      table { /*  */
+        width: 600px; /* Fixed width */
+        margin: 0px auto; /* Top = 32px margin of textbox above, right & left = auto */
+        border-spacing: 0px; /* Removes 'grid' between cells */
+      }
+      tr { background-color: teal; } /* Odd-numbered rows */
+      tr.even { background-color: lightseagreen; } /* Even-numbered rows */
+      th, td { padding: 5px; } /* Padding for all table cells */
+      td { 
+        border-top: 1px solid white; /* White dividing lines between rows */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>City Library Catalogue Search</h1> <!-- Title header -->
+    <div class="textbox"> <!-- Container for body text -->
+      <p>You can search for any item in the library&rsquo;s catalogue, either by title or author/artist.</p>
+      <p>Please enter your search terms, separated by spaces.</p>
+    </div>
+    <form action="http://www.example.com/form.php" method="get"> <!-- Form elements -->
+      <label for="search">Search:</label>
+      <input type="text" name="search" size=25 /> <!-- Search box -->
+      <label for="media">Media type:</label>
+      <select name="media"> <!-- Drop-down menu -->
+        <option value="all">All items</option>
+        <option value="book">Books</option>
+        <option value="audiobook">Audiobooks</option>
+        <option value="cd">Compact Discs</option>
+        <option value="scores">Music Scores</option>
+        <option value="dvd">DVDs</option>
+      </select>
+      <input type="submit" value="Search" id="submit" /> <!-- Button -->
+    </form>
+    <div class="textbox">
+      <p>Borrowing fees are shown in the table below.</p>
+    </div>
+    <table>
+      <tr>
+        <th>Media</th>
+        <th>Borrowing fee per item</th>
+      </tr>
+      <tr class="even">
+        <td>Book</td>
+        <td>No Charge</td>
+      </tr>
+      <tr>
+        <td>Audiobook</td>
+        <td>0.50</td>
+      </tr>
+      <tr class="even">
+        <td>Compact Disc</td>
+        <td>0.50</td>
+      </tr>
+      <tr>
+        <td>Music Score</td>
+        <td>No Charge</td>
+      </tr>
+      <tr class="even">
+        <td>DVD</td>
+        <td>1.00</td>
+      </tr>
+    </table>
+  </body>
+</html>
